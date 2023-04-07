@@ -20,7 +20,6 @@ a {
 body {
   max-width: 1220px;
   margin-inline: auto;
-  border: 2px solid black;
 }
 
 /* nav styling */
@@ -29,7 +28,7 @@ nav {
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
-  box-shadow: 0px 2px 10px black;
+  box-shadow: 0px 2px 0px black;
 }
 nav .header {
   display: flex;
@@ -55,6 +54,109 @@ nav .nav_links {
 }
 nav .nav_links .nav_link {
   padding: 1rem;
+}
+
+/*panel styling */
+.panel {
+  width: 100%;
+  aspect-ratio: 4/1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+.panel .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  z-index: 2;
+  background: linear-gradient(0deg, rgba(1, 86, 103, 0.767) 10%, rgba(255, 255, 255, 0)), url("../assets/images/panel.jpg");
+  background-position: center;
+  filter: blur(2px);
+  transition: all 0.3s ease-in-out;
+}
+.panel h2 {
+  font-family: "Alkatra", cursive;
+  font-weight: 400;
+  color: rgb(225, 229, 242);
+  font-size: 4rem;
+  z-index: 3;
+}
+.panel p {
+  color: rgb(225, 229, 242);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  z-index: 3;
+}
+
+/*recipe panel styling*/
+.recipes {
+  padding: 1rem;
+}
+.recipes h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Alkatra", cursive;
+  font-weight: 400;
+}
+.recipes .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.recipes .cards .card {
+  aspect-ratio: 3/2;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.recipes .cards .card .desc {
+  width: 100%;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  transform: translate(1rem, -1rem);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+.recipes .cards .card .desc .title {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.recipes .cards .card .desc .text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+.recipes .cards .card .eggroll {
+  background: linear-gradient(12deg, rgba(193, 240, 250, 0.641), rgba(188, 226, 234, 0.684), rgba(255, 255, 255, 0) 50%), url("../assets/images/eggroll.jpg");
+}
+.recipes .cards .card .chickenbiriyani {
+  background: linear-gradient(12deg, rgba(193, 240, 250, 0.641), rgba(188, 226, 234, 0.684), rgba(255, 255, 255, 0) 50%), url("../assets/images/chickenbiriyani.jpg");
+}
+.recipes .cards .card .masaladosa {
+  background: linear-gradient(12deg, rgba(193, 240, 250, 0.641), rgba(188, 226, 234, 0.684), rgba(255, 255, 255, 0) 50%), url("../assets/images/masaladosa.jpg");
+}
+.recipes .cards .card .samosa {
+  background: linear-gradient(12deg, rgba(193, 240, 250, 0.641), rgba(188, 226, 234, 0.684), rgba(255, 255, 255, 0) 50%), url("../assets/images/samosa.jpg");
+}
+.recipes .cards .card .jaljeera {
+  background: linear-gradient(12deg, rgba(193, 240, 250, 0.641), rgba(188, 226, 234, 0.684), rgba(255, 255, 255, 0) 50%), url("../assets/images/jaljeera.jpg");
+}
+.recipes .cards .card .img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  z-index: 0;
 }
 
 /* mobile viwe styling */
@@ -134,6 +236,29 @@ nav .nav_links .nav_link {
     padding: 1rem;
     margin: 0;
   }
+  .panel {
+    aspect-ratio: 3/2;
+  }
+  .panel .img {
+    background-size: cover;
+  }
+  .panel h2 {
+    font-size: 2.5rem;
+  }
+  .panel p {
+    font-size: 1rem;
+  }
+  .recipes .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .recipes .cards .card {
+    min-width: 200px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
 }
 @media (hover) {
   .nav_link span {
@@ -154,6 +279,12 @@ nav .nav_links .nav_link {
   .nav_link:hover span::after {
     left: 0;
     width: 100%;
+  }
+  .panel:hover .img {
+    transform: scale(1.02);
+  }
+  .recipes .cards .card:hover .img {
+    transform: scale(1.05);
   }
 }
 /* animation */
