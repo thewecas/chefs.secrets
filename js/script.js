@@ -4,14 +4,14 @@ function initate() {
     count = 0;
 }
 
-let menu = $("#menu");
+let menu = document.getElementById("menu");
 function toggleMenu() {
     if (count == 0) {
-        menu.toggleClass("menu_open")
+        menu.classList.toggle("menu_open")
         count = 1;
     }
     else {
-        menu.toggleClass("menu_closed");
-        menu.toggleClass("menu_open")
+        menu.classList.toggle("menu_closed");
+        menu.classList.toggle("menu_open")
     }
 }
