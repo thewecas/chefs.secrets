@@ -8,6 +8,11 @@ let contact = document.getElementById("contact")
 let count;
 function initate() {
     count = 0;
+    showFlex(panel);
+    show(recipe);
+    hide(tag);
+    hide(about);
+    hide(contact);
 
 }
 
