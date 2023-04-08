@@ -39,15 +39,8 @@ a {
 body {
   max-width: $max-width;
   margin-inline: auto;
-  // min-height: 100svh;
+  min-height: 100svh;
 }
-
-// .home {
-//   display: none !important;
-// }
-// .about {
-//   display: none !important;
-// }
 
 /* nav styling */
 
@@ -81,6 +74,16 @@ nav {
     font-family: $body_head;
     .nav_link {
       padding: 1rem;
+    }
+    .button {
+      // @include btn;
+      background-color: $teal;
+      height: 40px;
+      margin-top: 0.5rem;
+      border-radius: 0.25rem;
+      display: grid;
+      place-content: center;
+      color: white;
     }
   }
 }
@@ -339,6 +342,7 @@ footer {
     font-family: $standout;
   }
 }
+
 /* mobile viwe styling */
 @media screen and (max-width: 768px) {
   nav {
@@ -351,7 +355,7 @@ footer {
     }
 
     .header:has(.menu_open) + .nav_links {
-      height: 14rem;
+      height: 19rem;
       transition: height 0.5s ease-in-out;
     }
 
@@ -421,6 +425,9 @@ footer {
         text-align: center;
         padding: 1rem;
         margin: 0;
+      }
+      .button {
+        width: 100px;
       }
     }
   }
@@ -553,7 +560,6 @@ footer {
     transform: rotate(45deg) translate(5px, 5px);
   }
 }
-
 @keyframes open2 {
   0% {
     transform: none;
@@ -591,7 +597,6 @@ footer {
     transform: none;
   }
 }
-
 @keyframes close3 {
   0% {
     transform: rotate(-45deg) translate(5px, -5px);
@@ -610,7 +615,6 @@ footer {
     transform: none;
   }
 }
-
 @keyframes slide_up {
   0% {
     transform: none;

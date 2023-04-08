@@ -20,6 +20,7 @@ a {
 body {
   max-width: 1220px;
   margin-inline: auto;
+  min-height: 100svh;
 }
 
 /* nav styling */
@@ -54,6 +55,15 @@ nav .nav_links {
 }
 nav .nav_links .nav_link {
   padding: 1rem;
+}
+nav .nav_links .button {
+  background-color: rgb(31, 122, 140);
+  height: 40px;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  display: grid;
+  place-content: center;
+  color: white;
 }
 
 /*panel styling */
@@ -304,7 +314,7 @@ footer a {
     transition: height 0.5s ease-in-out;
   }
   nav .header:has(.menu_open) + .nav_links {
-    height: 14rem;
+    height: 19rem;
     transition: height 0.5s ease-in-out;
   }
   nav .header {
@@ -368,6 +378,9 @@ footer a {
     text-align: center;
     padding: 1rem;
     margin: 0;
+  }
+  nav .nav_links .button {
+    width: 100px;
   }
   .panel {
     aspect-ratio: 3/2;

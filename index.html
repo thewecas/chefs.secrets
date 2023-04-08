@@ -23,16 +23,17 @@
             </div>
         </div>
         <div class=" nav_links">
-            <a href="" class="nav_link"><span>Home</span></a>
-            <a href="" class="nav_link"><span>Recipes</span></a>
-            <a href="" class="nav_link"><span>Tags</span></a>
-            <a href="" class="nav_link"><span>About</span></a>
+            <span onclick="toHome()" class="nav_link"><span>Home</span></span>
+            <span onclick="toRecipes()" class="nav_link"><span>Recipes</span></span>
+            <span onclick="toTags()" class="nav_link"><span>Tags</span></span>
+            <span onclick="toAbout()" class="nav_link"><span>About</span></span>
+            <span onclick="toContact()" class="nav_link button">Contact</span>
         </div>
     </nav>
     <!-- nav ends -->
 
     <!-- panel -->
-    <section class="panel home">
+    <section id="panel" class="panel home">
         <div class="img"></div>
         <h2>Chef's Secrets</h2>
         <p>From kitchen to table, let's create magic together!</p>
@@ -41,7 +42,7 @@
 
     <!-- Recipes -->
 
-    <section class="recipes home">
+    <section id="recipe" class="recipes home">
         <h2>Recipes</h2>
         <div class="cards">
             <div class="card">
@@ -83,16 +84,19 @@
     </section>
     <!-- Recipes ends -->
 
+    <!-- tags -->
+    <section id="tag" class="tag"></section>
+    <!-- tags ends -->
 
     <!-- about section -->
 
-    <section class="about">
+    <section id="about" class="about">
         <div class="content">
             <h2 class="slogan">From kitchen to table,<br> let's create magic together!</h2>
             <p class="text">We're all about bringing people together around the table. Our mission is to provide users
                 with a diverse range of recipes that are easy to make and delicious to eat, so that you can create
                 unforgettable meals and memories with your loved ones.</p>
-            <a href="" class="button">Contact</a>
+            <span onclick="toContactNoMenu()" class="button">Contact</span>
         </div>
         <div class="img"></div>
 
@@ -100,7 +104,7 @@
     <!-- about section ends -->
 
     <!-- contact section -->
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="content">
             <span>Want to get in touch ?</span>
             <p class="text">We're always here to help! If you have any questions or feedback about our website or our
