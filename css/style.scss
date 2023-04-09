@@ -1,14 +1,20 @@
-@import "color";
 @import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Poppins:wght@200;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
 
-// fonts to use
-/*
-for title
-font-family: 'Alkatra', cursive;   
-font-family: 'Poppins', sans-serif;
-font-family: 'Quicksand', sans-serif;
-*/
+$gunmetal: rgba(2, 43, 58, 1);
+$teal: rgba(31, 122, 140, 1);
+$columbia-blue: rgba(191, 219, 247, 1);
+$lavender-web: rgba(225, 229, 242, 1);
+$white: rgba(255, 255, 255, 1);
+
+$recipe-gradient: linear-gradient(
+  12deg,
+  rgba(193, 240, 250, 0.641),
+  rgba(188, 226, 234, 0.684),
+  #ffffff00 50%
+);
+
 $max-width: 1220px;
+
 $standout: "Alkatra", cursive;
 $body_head: "Poppins", sans-serif;
 $body_text: "Quicksand", sans-serif;
@@ -40,12 +46,12 @@ body {
   max-width: $max-width;
   margin-inline: auto;
   min-height: 100svh;
+  overflow-y: scroll;
 }
 
-/* nav styling */
-
+/*nav */
 nav {
-  background-color: $navbar_bg;
+  background-color: $white;
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
@@ -55,12 +61,13 @@ nav {
     font-size: 1.5rem;
     padding: 0.75rem;
     margin-right: auto;
-    a {
+    span {
       font-family: $standout;
       padding: 0.5rem;
-      color: $primary_light;
+      color: $teal;
+      cursor: pointer;
       em {
-        color: $primary_light;
+        color: $teal;
       }
     }
 
@@ -74,6 +81,7 @@ nav {
     font-family: $body_head;
     .nav_link {
       padding: 1rem;
+      cursor: pointer;
     }
     .button {
       // @include btn;
@@ -87,8 +95,9 @@ nav {
     }
   }
 }
+/*nav ends*/
 
-/*panel styling */
+/*panel */
 .panel {
   width: 100%;
   aspect-ratio: 4/1;
@@ -114,19 +123,20 @@ nav {
   h2 {
     font-family: $standout;
     font-weight: 400;
-    color: $secondary_light;
+    color: $lavender-web;
     font-size: 4rem;
     z-index: 3;
   }
   p {
-    color: $secondary_light;
+    color: $lavender-web;
     font-family: $body_head;
     font-size: 1.2rem;
     z-index: 3;
   }
 }
+/*panel ends*/
 
-/*recipe styling*/
+/*recipe */
 .recipes {
   padding: 1rem;
   h2 {
@@ -140,6 +150,7 @@ nav {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     .card {
+      cursor: pointer;
       .desc {
         width: 100%;
         font-size: 1.2rem;
@@ -153,7 +164,7 @@ nav {
           font-family: $body_head;
           font-weight: 400;
 
-          // color: $secondary_dark;
+          // color: $columbia-blue;
         }
         .text {
           font-family: $body_text;
@@ -166,49 +177,20 @@ nav {
       position: relative;
 
       .eggroll {
-        background: linear-gradient(
-            12deg,
-            rgba(193, 240, 250, 0.641),
-            rgba(188, 226, 234, 0.684),
-            #ffffff00 50%
-          ),
-          url("../assets/images/eggroll.jpg");
+        background: $recipe-gradient, url("../assets/images/eggroll.jpg");
       }
       .chickenbiriyani {
-        background: linear-gradient(
-            12deg,
-            rgba(193, 240, 250, 0.641),
-            rgba(188, 226, 234, 0.684),
-            #ffffff00 50%
-          ),
+        background: $recipe-gradient,
           url("../assets/images/chickenbiriyani.jpg");
       }
       .masaladosa {
-        background: linear-gradient(
-            12deg,
-            rgba(193, 240, 250, 0.641),
-            rgba(188, 226, 234, 0.684),
-            #ffffff00 50%
-          ),
-          url("../assets/images/masaladosa.jpg");
+        background: $recipe-gradient, url("../assets/images/masaladosa.jpg");
       }
       .samosa {
-        background: linear-gradient(
-            12deg,
-            rgba(193, 240, 250, 0.641),
-            rgba(188, 226, 234, 0.684),
-            #ffffff00 50%
-          ),
-          url("../assets/images/samosa.jpg");
+        background: $recipe-gradient, url("../assets/images/samosa.jpg");
       }
       .jaljeera {
-        background: linear-gradient(
-            12deg,
-            rgba(193, 240, 250, 0.641),
-            rgba(188, 226, 234, 0.684),
-            #ffffff00 50%
-          ),
-          url("../assets/images/jaljeera.jpg");
+        background: $recipe-gradient, url("../assets/images/jaljeera.jpg");
       }
 
       .img {
@@ -223,8 +205,9 @@ nav {
     }
   }
 }
+/*recipe ends*/
 
-/*about styling */
+/*about  */
 .about {
   display: flex;
   padding: 2rem;
@@ -246,6 +229,7 @@ nav {
     }
     .button {
       @include btn();
+      cursor: pointer;
     }
   }
   .img {
@@ -260,8 +244,9 @@ nav {
     border-radius: 0.25rem;
   }
 }
+/*about ends*/
 
-/*contact styling*/
+/*contact */
 .contact {
   display: flex;
   padding: 2rem;
@@ -321,7 +306,9 @@ nav {
     }
   }
 }
+/*contact ends*/
 
+/*footer */
 footer {
   position: sticky;
   top: 100%;
@@ -342,6 +329,7 @@ footer {
     font-family: $standout;
   }
 }
+/*footer ends*/
 
 /* mobile viwe styling */
 @media screen and (max-width: 768px) {
@@ -381,9 +369,9 @@ footer {
         hr {
           width: 100%;
           height: 3px;
-          background-color: $primary_dark;
+          background-color: $gunmetal;
           border-radius: 3px;
-          border-color: $primary_dark;
+          border-color: $gunmetal;
           box-shadow: none;
         }
       }
@@ -491,6 +479,7 @@ footer {
 
     .content {
       width: 100%;
+      padding: 0;
       span {
         font-size: 1.75rem;
       }
@@ -507,7 +496,9 @@ footer {
     }
   }
 }
+/* mobile viwe styling  ends*/
 
+/* styling for hover devices */
 @media (hover) {
   .nav_link {
     span {
@@ -520,7 +511,7 @@ footer {
         border-radius: 2px;
         position: absolute;
         left: 50%;
-        background-color: $primary_light;
+        background-color: $teal;
         transition: all 0.2s ease-in-out;
         line-break: unset;
       }
@@ -549,6 +540,7 @@ footer {
     }
   }
 }
+/* styling for hover devices  ends*/
 
 /* animation */
 @keyframes open1 {
@@ -640,5 +632,4 @@ footer {
     opacity: 0;
   }
 }
-
-/* nav styling ends*/
+/* animation ends*/

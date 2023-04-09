@@ -1,11 +1,4 @@
-/* SCSS Gradient */
 @import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Poppins:wght@200;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
-/*
-for title
-font-family: 'Alkatra', cursive;   
-font-family: 'Poppins', sans-serif;
-font-family: 'Quicksand', sans-serif;
-*/
 * {
   margin: 0;
   padding: 0;
@@ -21,9 +14,10 @@ body {
   max-width: 1220px;
   margin-inline: auto;
   min-height: 100svh;
+  overflow-y: scroll;
 }
 
-/* nav styling */
+/*nav */
 nav {
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -37,12 +31,13 @@ nav .header {
   padding: 0.75rem;
   margin-right: auto;
 }
-nav .header a {
+nav .header span {
   font-family: "Alkatra", cursive;
   padding: 0.5rem;
   color: rgb(31, 122, 140);
+  cursor: pointer;
 }
-nav .header a em {
+nav .header span em {
   color: rgb(31, 122, 140);
 }
 nav .header .menu {
@@ -55,6 +50,7 @@ nav .nav_links {
 }
 nav .nav_links .nav_link {
   padding: 1rem;
+  cursor: pointer;
 }
 nav .nav_links .button {
   background-color: rgb(31, 122, 140);
@@ -66,7 +62,8 @@ nav .nav_links .button {
   color: white;
 }
 
-/*panel styling */
+/*nav ends*/
+/*panel */
 .panel {
   width: 100%;
   aspect-ratio: 4/1;
@@ -104,7 +101,8 @@ nav .nav_links .button {
   z-index: 3;
 }
 
-/*recipe styling*/
+/*panel ends*/
+/*recipe */
 .recipes {
   padding: 1rem;
 }
@@ -120,6 +118,7 @@ nav .nav_links .button {
   gap: 1rem;
 }
 .recipes .cards .card {
+  cursor: pointer;
   aspect-ratio: 3/2;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -169,7 +168,8 @@ nav .nav_links .button {
   z-index: 0;
 }
 
-/*about styling */
+/*recipe ends*/
+/*about  */
 .about {
   display: flex;
   padding: 2rem;
@@ -201,6 +201,7 @@ nav .nav_links .button {
   border-radius: 0.5rem;
   display: inline-block;
   margin: 1rem 0rem;
+  cursor: pointer;
 }
 .about .img {
   background: url("../assets/images/about.jpg");
@@ -213,7 +214,8 @@ nav .nav_links .button {
   border-radius: 0.25rem;
 }
 
-/*contact styling*/
+/*about ends*/
+/*contact */
 .contact {
   display: flex;
   padding: 2rem;
@@ -281,6 +283,8 @@ nav .nav_links .button {
   border: transparent;
 }
 
+/*contact ends*/
+/*footer */
 footer {
   position: sticky;
   top: 100%;
@@ -302,6 +306,7 @@ footer a {
   font-family: "Alkatra", cursive;
 }
 
+/*footer ends*/
 /* mobile viwe styling */
 @media screen and (max-width: 768px) {
   nav {
@@ -432,6 +437,7 @@ footer a {
   }
   .contact .content {
     width: 100%;
+    padding: 0;
   }
   .contact .content span {
     font-size: 1.75rem;
@@ -447,6 +453,8 @@ footer a {
     margin-bottom: 1rem;
   }
 }
+/* mobile viwe styling  ends*/
+/* styling for hover devices */
 @media (hover) {
   .nav_link span {
     position: relative;
@@ -474,6 +482,7 @@ footer a {
     transform: scale(1.05);
   }
 }
+/* styling for hover devices  ends*/
 /* animation */
 @keyframes open1 {
   0% {
@@ -555,4 +564,4 @@ footer a {
     opacity: 0;
   }
 }
-/* nav styling ends*//*# sourceMappingURL=style.css.map */
+/* animation ends*//*# sourceMappingURL=style.css.map */

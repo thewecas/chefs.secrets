@@ -57,7 +57,7 @@ function toAbout() {
     hide(recipe);
     hide(tag);
     hide(contact);
-    show(about);
+    showFlex(about);
 }
 function toContact() {
     toggleMenu();
@@ -65,7 +65,15 @@ function toContact() {
     hide(recipe);
     hide(tag);
     hide(about);
-    show(contact);
+    showFlex(contact);
+}
+
+function toHomeNoMenu() {
+    showFlex(panel);
+    show(recipe);
+    hide(tag);
+    hide(about);
+    hide(contact);
 }
 
 function toContactNoMenu() {
@@ -73,7 +81,7 @@ function toContactNoMenu() {
     hide(recipe);
     hide(tag);
     hide(about);
-    show(contact);
+    showFlex(contact);
 }
 
 
