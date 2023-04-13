@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef's Secrets</title>
+
+    <script src="https://kit.fontawesome.com/7ec0ac021b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="initate()">
+
+
+    <!-- nav -->
+    <nav>
+        <div class="header">
+            <a href="./index.html#">Chef's Secrets</a>
+            <div id="menu" class="menu" onclick="toggleMenu()">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </div>
+        <div class=" nav_links">
+            <a href="./index.html#" class="nav_link"><span>Home</span></a>
+            <a href="./index.html#recipe" class="nav_link"><span>Recipes</span></a>
+            <a href="./about.html" class="nav_link"><span>About</span></a>
+            <a href="./contact.html" onclick="toggleMenu()" class="nav_link button">Contact</a>
+        </div>
+    </nav>
+    <!-- nav ends -->
+
+
+    <!-- contact -->
+    <section id="contact" class="contact">
+        <div class="content">
+            <span>Want to get in touch ?</span>
+            <p class="text">We're always here to help! If you have any questions or feedback about our website or our
+                recipes, please
+                don't hesitate to get in touch. <em>From kitchen to table, let's create magic together!</em> </p>
+        </div>
+        <div class="form">
+            <label for="name">Your name</label>
+            <input type="text" name="name">
+            <label for="email">Your Email</label>
+            <input type="text" name="email">
+            <label for="message">Message</label>
+            <textarea name="message"></textarea>
+            <input type="reset" value="Submit" class="button">
+
+
+        </div>
+    </section>
+    <!-- contact ends -->
+
+
+    <!-- footer -->
+    <footer>
+        &#169 2023 <span>Chef's Secrets</span> built by <a href="https://github.com/thewecas">thewecas</a>
+    </footer>
+    <!-- footer ends -->
+
+    <!-- scripts -->
+    <script src="./js/script.js"></script>
+    <!-- scripts ends -->
+</body>
+
+</html>

@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chef's Secrets</title>
 
+    <script src="https://kit.fontawesome.com/7ec0ac021b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body onload="initate()">
 
+
     <!-- nav -->
     <nav>
         <div class="header">
-            <span onclick="toHomeNoMenu()" href="#">Chef's Secrets</span>
+            <a href="./index.html#">Chef's Secrets</a>
             <div id="menu" class="menu" onclick="toggleMenu()">
                 <hr>
                 <hr>
@@ -23,11 +25,10 @@
             </div>
         </div>
         <div class=" nav_links">
-            <span onclick="toHome()" class="nav_link"><span>Home</span></span>
-            <span onclick="toRecipes()" class="nav_link"><span>Recipes</span></span>
-            <span onclick="toTags()" class="nav_link"><span>Tags</span></span>
-            <span onclick="toAbout()" class="nav_link"><span>About</span></span>
-            <span onclick="toContact()" class="nav_link button">Contact</span>
+            <a href="./index.html#" class="nav_link"><span>Home</span></a>
+            <a href="./index.html#recipe" onclick="toggleMenu()" class="nav_link"><span>Recipes</span></a>
+            <a href="./about.html" class="nav_link"><span>About</span></a>
+            <a href="./contact.html" class="nav_link button">Contact</a>
         </div>
     </nav>
     <!-- nav ends -->
@@ -44,84 +45,44 @@
     <section id="recipe" class="recipes home">
         <h2>Recipes</h2>
         <div class="cards">
-            <div class="card">
-                <div class="img eggroll"></div>
+            <a href="./recipe-detail.html" class="card" id="eggroll">
+                <div class="img"></div>
                 <div class="desc">
                     <span class="title">Eggroll</span>
-                    <p class="text">Prep : 15min | Cook : 5min</p>
+                    <p class="text">Prep : 10min | total Time : 25min</p>
                 </div>
-            </div>
-            <div class="card">
-                <div class="img chickenbiriyani"></div>
+            </a>
+            <div class="card" id="chickenbiriyani">
+                <div class="img"></div>
                 <div class="desc">
                     <span class="title">Chicken Biriyani</span>
-                    <p class="text">Prep : 15min | Cook : 5min</p>
+                    <p class="text">Prep : 25min | total Time : 1h</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="img masaladosa"></div>
+            <div class="card" id="masaladosa">
+                <div class="img"></div>
                 <div class="desc">
                     <span class="title">Masala Dosa</span>
-                    <p class="text">Prep : 15min | Cook : 5min</p>
+                    <p class="text">Prep : 25min | total Time : 1h</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="img samosa"></div>
+            <a onclick="toggleMenu()" class="card" id="samosa">
+                <div class="img"></div>
                 <div class="desc">
                     <span class="title">Samosa</span>
-                    <p class="text">Prep : 15min | Cook : 5min</p>
+                    <p class="text">Prep : 25min | total Time : 1h</p>
                 </div>
-            </div>
-            <div class="card">
-                <div class="img jaljeera"></div>
+            </a>
+            <div class="card" id="jaljeera">
+                <div class="img "></div>
                 <div class="desc">
                     <span class="title">Jaljeera</span>
-                    <p class="text">Prep : 15min | Cook : 5min</p>
+                    <p class="text">Prep : 25min | total Time : 1h</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- Recipes ends -->
-
-    <!-- tags -->
-    <section id="tag" class="tag"></section>
-    <!-- tags ends -->
-
-    <!-- about -->
-    <section id="about" class="about">
-        <div class="content">
-            <h2 class="slogan">From kitchen to table,<br> let's create magic together!</h2>
-            <p class="text">We're all about bringing people together around the table. Our mission is to provide users
-                with a diverse range of recipes that are easy to make and delicious to eat, so that you can create
-                unforgettable meals and memories with your loved ones.</p>
-            <span onclick="toContactNoMenu()" class="button">Contact</span>
-        </div>
-        <div class="img"></div>
-
-    </section>
-    <!-- about ends -->
-
-    <!-- contact -->
-    <section id="contact" class="contact">
-        <div class="content">
-            <span>Want to get in touch ?</span>
-            <p class="text">We're always here to help! If you have any questions or feedback about our website or our
-                recipes, please
-                don't hesitate to get in touch. <em>From kitchen to table, let's create magic together!</em> </p>
-        </div>
-        <div class="form">
-            <label for="name">Your name</label>
-            <input type="text" name="name">
-            <label for="email">Your Email</label>
-            <input type="text" name="email">
-            <label for="message">Message</label>
-            <textarea name="message"></textarea>
-            <input type="reset" value="Submit" class="button">
-
-
-        </div>
-    </section>
-    <!-- contact ends -->
 
     <!-- footer -->
     <footer>

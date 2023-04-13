@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef's Secrets</title>
+
+    <script src="https://kit.fontawesome.com/7ec0ac021b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="initate()">
+
+    <!-- nav -->
+    <nav>
+        <div class="header">
+            <a href="./index.html#">Chef's Secrets</a>
+            <div id="menu" class="menu" onclick="toggleMenu()">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </div>
+        <div class=" nav_links">
+            <a href="./index.html#" class="nav_link"><span>Home</span></a>
+            <a href="./index.html#recipe" class="nav_link"><span>Recipes</span></a>
+            <a href="./about.html" onclick="toggleMenu()" class="nav_link"><span>About</span></a>
+            <a href="./contact.html" class="nav_link button">Contact</a>
+        </div>
+    </nav>
+    <!-- nav ends -->
+
+
+    <!-- about -->
+    <section id="about" class="about">
+        <div class="content">
+            <h2 class="slogan">From kitchen to table,<br> let's create magic together!</h2>
+            <p class="text">We're all about bringing people together around the table. Our mission is to provide users
+                with a diverse range of recipes that are easy to make and delicious to eat, so that you can create
+                unforgettable meals and memories with your loved ones.</p>
+            <span onclick="toContact(false)" class="button">Contact</span>
+        </div>
+        <div class="img"></div>
+
+    </section>
+    <!-- about ends -->
+
+
+    <!-- footer -->
+    <footer>
+        &#169 2023 <span>Chef's Secrets</span> built by <a href="https://github.com/thewecas">thewecas</a>
+    </footer>
+    <!-- footer ends -->
+
+    <!-- scripts -->
+    <script src="./js/script.js"></script>
+    <!-- scripts ends -->
+</body>
+
+</html>

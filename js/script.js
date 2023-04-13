@@ -8,11 +8,9 @@ let contact = document.getElementById("contact")
 let count;
 function initate() {
     count = 0;
-    showFlex(panel);
-    show(recipe);
-    hide(tag);
-    hide(about);
-    hide(contact);
+    // showFlex(panel);
+    // show(recipe);
+
 
 }
 
@@ -27,40 +25,50 @@ function toggleMenu() {
     }
 }
 
-function toHome() {
-    toggleMenu();
+function toHome(flag) {
+    if (flag) {
+        toggleMenu();
+    }
     showFlex(panel);
     show(recipe);
     hide(tag);
     hide(about);
     hide(contact);
 }
-function toRecipes() {
-    toggleMenu();
+function toRecipes(flag) {
+    if (flag) {
+        toggleMenu();
+    }
     hide(panel);
     show(recipe);
     hide(tag);
     hide(about);
     hide(contact);
 }
-function toTags() {
-    toggleMenu();
+function toTags(flag) {
+    if (flag) {
+        toggleMenu();
+    }
     hide(panel);
     hide(recipe);
     show(tag);
     hide(about);
     hide(contact);
 }
-function toAbout() {
-    toggleMenu();
+function toAbout(flag) {
+    if (flag) {
+        toggleMenu();
+    }
     hide(panel);
     hide(recipe);
     hide(tag);
     hide(contact);
     showFlex(about);
 }
-function toContact() {
-    toggleMenu();
+function toContact(flag) {
+    if (flag) {
+        toggleMenu();
+    }
     hide(panel);
     hide(recipe);
     hide(tag);
@@ -68,21 +76,7 @@ function toContact() {
     showFlex(contact);
 }
 
-function toHomeNoMenu() {
-    showFlex(panel);
-    show(recipe);
-    hide(tag);
-    hide(about);
-    hide(contact);
-}
 
-function toContactNoMenu() {
-    hide(panel);
-    hide(recipe);
-    hide(tag);
-    hide(about);
-    showFlex(contact);
-}
 
 
 function hide(element) {
